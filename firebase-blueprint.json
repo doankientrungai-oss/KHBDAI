@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with role and access status",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "Display name of the user" },
+        "photoURL": { "type": "string", "description": "Profile picture URL" },
+        "status": { "type": "string", "enum": ["official", "trial", "blocked"], "description": "Access status" },
+        "role": { "type": "string", "enum": ["admin", "user"], "description": "Role of the user" },
+        "generationCount": { "type": "number", "description": "Number of lesson plans generated" },
+        "notes": { "type": "string", "description": "Admin notes for this user" },
+        "createdAt": { "type": "string", "description": "ISO timestamp or server time of creation" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp or server time of last update" }
+      },
+      "required": ["uid", "email", "status", "role"]
+    },
+    "Preapproved": {
+      "title": "Preapproved",
+      "description": "Pre-approved user email configurations",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "description": "Email to pre-approve" },
+        "status": { "type": "string", "enum": ["official", "trial", "blocked"], "description": "Granted status" },
+        "notes": { "type": "string", "description": "Notes" },
+        "createdAt": { "type": "string", "description": "Timestamp" }
+      },
+      "required": ["email", "status"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Admin identifier document",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "description": "Admin email" },
+        "addedAt": { "type": "string", "description": "Timestamp when added as admin" }
+      },
+      "required": ["email"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Collection of registered user accounts and their permission status"
+    },
+    "/preapproved/{emailId}": {
+      "schema": "Preapproved",
+      "description": "Pre-approved emails with assigned statuses"
+    },
+    "/admins/{adminId}": {
+      "schema": "Admin",
+      "description": "Allowlisted administrators"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "lesson-plans-ai-gmail2",
+  "description": "An application to generate detailed lesson plans for Vietnamese middle school students following the 5512 template, using AI to assist teachers in creating engaging and effective educational content.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

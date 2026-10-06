@@ -1,0 +1,37 @@
+{
+  "name": "khbd(cv5512+3456nls)vip",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^1.22.0",
+    "@types/jszip": "^3.4.1",
+    "docx": "8.5.0",
+    "file-saver": "2.0.5",
+    "firebase": "^12.19.0",
+    "framer-motion": "^12.34.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "jszip": "^3.10.1",
+    "katex": "^0.18.1",
+    "lucide-react": "^0.576.0",
+    "mammoth": "^1.12.1",
+    "pdfjs-dist": "^6.2.108",
+    "pptxgenjs": "^4.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.8",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

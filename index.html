@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KHBD AI VIP V4.0 - Soạn Kế Hoạch Bài Dạy 5512 & 2345</title>
+    <meta name="description" content="An application to generate detailed lesson plans for Vietnamese middle school students following the 5512 template, using AI to assist teachers in creating engaging and effective educational content." />
+    <meta property="og:title" content="KHBD AI VIP V4.0 - Soạn Kế Hoạch Bài Dạy 5512 & 2345" />
+    <meta property="og:description" content="An application to generate detailed lesson plans for Vietnamese middle school students following the 5512 template, using AI to assist teachers in creating engaging and effective educational content." />
+    <script>
+      /* Fix third-party Chrome extension errors where window.fetch has only a getter */
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var activeFetch = typeof originalFetch === 'function' ? originalFetch.bind(window) : originalFetch;
+
+          // Define fetch on window with both getter and setter
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return activeFetch;
+            },
+            set: function(fn) {
+              activeFetch = typeof fn === 'function' ? fn : originalFetch;
+            },
+            configurable: true,
+            enumerable: true
+          });
+
+          // Also define on Window.prototype if configurable
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            var protoDesc = Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
+            if (!protoDesc || protoDesc.configurable) {
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() {
+                  return activeFetch;
+                },
+                set: function(fn) {
+                  activeFetch = typeof fn === 'function' ? fn : originalFetch;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        } catch (e) {
+          // Ignore fallback errors
+        }
+
+        // Global listener to capture and prevent uncaught extension errors
+        window.addEventListener('error', function(event) {
+          if (!event) return;
+          var filename = event.filename || '';
+          var message = event.message || '';
+          if (
+            filename.indexOf('chrome-extension://') !== -1 ||
+            filename.indexOf('moz-extension://') !== -1 ||
+            message.indexOf('Cannot set property fetch of #<Window>') !== -1 ||
+            message.indexOf('fetch of #<Window> which has only a getter') !== -1
+          ) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        }, true);
+      })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.js"></script>
+    <style>
+      @keyframes loading-bar {
+        0% { transform: translateX(-100%); }
+        50% { transform: translateX(0); }
+        100% { transform: translateX(100%); }
+      }
+      .animate-loading-bar {
+        animation: loading-bar 2s ease-in-out infinite;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e2e8f0;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #cbd5e1;
+      }
+      /* Standardized KaTeX Styles for Web & Word Export */
+      .katex-mathml { display: none !important; }
+      .katex { font-size: 1.05em; line-height: 1.2; text-indent: 0; }
+      .katex-display { margin: 0.5em 0 !important; overflow-x: auto; overflow-y: hidden; }
+      .katex .frac-line { border-bottom-color: currentColor; }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>📝</text></svg>">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "docx": "https://esm.sh/docx@8.5.0",
+    "file-saver": "https://esm.sh/file-saver@2.0.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#f8fafc] overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
